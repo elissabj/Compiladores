@@ -1,6 +1,12 @@
 from ply import *
 import sys
 
+"""
+[start creating the tokens given the regular expression.]
+
+Arguments:
+    t {str} -- [code of .txt]
+"""
 first = []
 symbolTable = {}
 literals = [',','.']
@@ -91,6 +97,12 @@ lex.lex(debug=0)
           
 
 class Information:
+    """
+    [symbolsTable]
+
+    Arguments:
+        dict {dictionary} -- [specific tokens]
+    """
     def __init__(self, dict):
         self.dict = dict
 
@@ -98,6 +110,12 @@ class Information:
         return self.dict
 
 class Details:
+    """
+    [detalis of the lexer]
+
+    Arguments:
+        first {list} -- [order of specific tokens]
+    """
     def __init__(self, first):
         self.first = first
     
@@ -105,11 +123,23 @@ class Details:
         return self.first
 
 def conection():
+    """
+    [helper funtion to run the symbol table]
+
+    Arguments:
+        dict {dictionary} -- [specific tokens]
+    """
     info = Information(symbolTable)
     symbols = info.getDict()
     return symbols
 
 def conectionDetails():
+    """
+    [helper funtion to run the details]
+
+    Arguments:
+        first {list} -- [order of specific tokens]
+    """
     details = Details(first)
     possibleError = details.getFirst()
     return possibleError
