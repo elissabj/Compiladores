@@ -5,6 +5,13 @@ import lexerS.lexer as lx
 symbolsTable = lx.conection()
 tokens = lx.tokens
 
+"""
+[definition of grammar]
+
+Arguments: 
+    tokens {LexToken} -- [tokens]
+"""
+
 def line(p):
     '''
     line : expression
@@ -73,9 +80,12 @@ def p_error(p):
         sys.exit()
 
 
-sParser = yacc.yacc()
+sParser = yacc.yacc() #parser construction
 
 def sgnParser(code):
+    """
+    [run funtion]
+    """
     sParser.error = 0
     p = sParser.parse(code)
     if sParser.error:
