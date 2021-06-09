@@ -1,0 +1,380 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Unused terminals:
+
+    TK_NAMEF
+
+Grammar
+
+Rule 0     S' -> expression
+Rule 1     expression -> declaration declaration declarationFuntion TK_LNBK
+Rule 2     declaration -> declareS
+Rule 3     declaration -> declareI
+Rule 4     declareS -> TK_SGN TK_LCOR TK_NAME TK_RCOR TK_ASIG TK_DATAS TK_LNBK
+Rule 5     declareI -> TK_FLT TK_LCOR TK_NAME TK_RCOR TK_ASIG TK_DATAI TK_LNBK
+Rule 6     declarationFuntion -> declareBasicOp
+Rule 7     declarationFuntion -> declareOp
+Rule 8     declareBasicOp -> TK_OPER TK_LPAR TK_NAME TK_RPAR
+Rule 9     typeOperation -> TK_OPED
+Rule 10    typeOperation -> TK_OPES
+Rule 11    typeOperation -> TK_OPEI
+Rule 12    typeOperation -> TK_OPEA
+Rule 13    declareOp -> typeOperation TK_LPAR TK_NAME , TK_NAME TK_RPAR
+
+Terminals, with rules where they appear
+
+,                    : 13
+TK_ASIG              : 4 5
+TK_DATAI             : 5
+TK_DATAS             : 4
+TK_FLT               : 5
+TK_LCOR              : 4 5
+TK_LNBK              : 1 4 5
+TK_LPAR              : 8 13
+TK_NAME              : 4 5 8 13 13
+TK_NAMEF             : 
+TK_OPEA              : 12
+TK_OPED              : 9
+TK_OPEI              : 11
+TK_OPER              : 8
+TK_OPES              : 10
+TK_RCOR              : 4 5
+TK_RPAR              : 8 13
+TK_SGN               : 4
+error                : 
+
+Nonterminals, with rules where they appear
+
+declaration          : 1 1
+declarationFuntion   : 1
+declareBasicOp       : 6
+declareI             : 3
+declareOp            : 7
+declareS             : 2
+expression           : 0
+typeOperation        : 13
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . expression
+    (1) expression -> . declaration declaration declarationFuntion TK_LNBK
+    (2) declaration -> . declareS
+    (3) declaration -> . declareI
+    (4) declareS -> . TK_SGN TK_LCOR TK_NAME TK_RCOR TK_ASIG TK_DATAS TK_LNBK
+    (5) declareI -> . TK_FLT TK_LCOR TK_NAME TK_RCOR TK_ASIG TK_DATAI TK_LNBK
+
+    TK_SGN          shift and go to state 5
+    TK_FLT          shift and go to state 6
+
+    expression                     shift and go to state 1
+    declaration                    shift and go to state 2
+    declareS                       shift and go to state 3
+    declareI                       shift and go to state 4
+
+state 1
+
+    (0) S' -> expression .
+
+
+
+state 2
+
+    (1) expression -> declaration . declaration declarationFuntion TK_LNBK
+    (2) declaration -> . declareS
+    (3) declaration -> . declareI
+    (4) declareS -> . TK_SGN TK_LCOR TK_NAME TK_RCOR TK_ASIG TK_DATAS TK_LNBK
+    (5) declareI -> . TK_FLT TK_LCOR TK_NAME TK_RCOR TK_ASIG TK_DATAI TK_LNBK
+
+    TK_SGN          shift and go to state 5
+    TK_FLT          shift and go to state 6
+
+    declaration                    shift and go to state 7
+    declareS                       shift and go to state 3
+    declareI                       shift and go to state 4
+
+state 3
+
+    (2) declaration -> declareS .
+
+    TK_SGN          reduce using rule 2 (declaration -> declareS .)
+    TK_FLT          reduce using rule 2 (declaration -> declareS .)
+    TK_OPER         reduce using rule 2 (declaration -> declareS .)
+    TK_OPED         reduce using rule 2 (declaration -> declareS .)
+    TK_OPES         reduce using rule 2 (declaration -> declareS .)
+    TK_OPEI         reduce using rule 2 (declaration -> declareS .)
+    TK_OPEA         reduce using rule 2 (declaration -> declareS .)
+
+
+state 4
+
+    (3) declaration -> declareI .
+
+    TK_SGN          reduce using rule 3 (declaration -> declareI .)
+    TK_FLT          reduce using rule 3 (declaration -> declareI .)
+    TK_OPER         reduce using rule 3 (declaration -> declareI .)
+    TK_OPED         reduce using rule 3 (declaration -> declareI .)
+    TK_OPES         reduce using rule 3 (declaration -> declareI .)
+    TK_OPEI         reduce using rule 3 (declaration -> declareI .)
+    TK_OPEA         reduce using rule 3 (declaration -> declareI .)
+
+
+state 5
+
+    (4) declareS -> TK_SGN . TK_LCOR TK_NAME TK_RCOR TK_ASIG TK_DATAS TK_LNBK
+
+    TK_LCOR         shift and go to state 8
+
+
+state 6
+
+    (5) declareI -> TK_FLT . TK_LCOR TK_NAME TK_RCOR TK_ASIG TK_DATAI TK_LNBK
+
+    TK_LCOR         shift and go to state 9
+
+
+state 7
+
+    (1) expression -> declaration declaration . declarationFuntion TK_LNBK
+    (6) declarationFuntion -> . declareBasicOp
+    (7) declarationFuntion -> . declareOp
+    (8) declareBasicOp -> . TK_OPER TK_LPAR TK_NAME TK_RPAR
+    (13) declareOp -> . typeOperation TK_LPAR TK_NAME , TK_NAME TK_RPAR
+    (9) typeOperation -> . TK_OPED
+    (10) typeOperation -> . TK_OPES
+    (11) typeOperation -> . TK_OPEI
+    (12) typeOperation -> . TK_OPEA
+
+    TK_OPER         shift and go to state 13
+    TK_OPED         shift and go to state 15
+    TK_OPES         shift and go to state 16
+    TK_OPEI         shift and go to state 17
+    TK_OPEA         shift and go to state 18
+
+    declarationFuntion             shift and go to state 10
+    declareBasicOp                 shift and go to state 11
+    declareOp                      shift and go to state 12
+    typeOperation                  shift and go to state 14
+
+state 8
+
+    (4) declareS -> TK_SGN TK_LCOR . TK_NAME TK_RCOR TK_ASIG TK_DATAS TK_LNBK
+
+    TK_NAME         shift and go to state 19
+
+
+state 9
+
+    (5) declareI -> TK_FLT TK_LCOR . TK_NAME TK_RCOR TK_ASIG TK_DATAI TK_LNBK
+
+    TK_NAME         shift and go to state 20
+
+
+state 10
+
+    (1) expression -> declaration declaration declarationFuntion . TK_LNBK
+
+    TK_LNBK         shift and go to state 21
+
+
+state 11
+
+    (6) declarationFuntion -> declareBasicOp .
+
+    TK_LNBK         reduce using rule 6 (declarationFuntion -> declareBasicOp .)
+
+
+state 12
+
+    (7) declarationFuntion -> declareOp .
+
+    TK_LNBK         reduce using rule 7 (declarationFuntion -> declareOp .)
+
+
+state 13
+
+    (8) declareBasicOp -> TK_OPER . TK_LPAR TK_NAME TK_RPAR
+
+    TK_LPAR         shift and go to state 22
+
+
+state 14
+
+    (13) declareOp -> typeOperation . TK_LPAR TK_NAME , TK_NAME TK_RPAR
+
+    TK_LPAR         shift and go to state 23
+
+
+state 15
+
+    (9) typeOperation -> TK_OPED .
+
+    TK_LPAR         reduce using rule 9 (typeOperation -> TK_OPED .)
+
+
+state 16
+
+    (10) typeOperation -> TK_OPES .
+
+    TK_LPAR         reduce using rule 10 (typeOperation -> TK_OPES .)
+
+
+state 17
+
+    (11) typeOperation -> TK_OPEI .
+
+    TK_LPAR         reduce using rule 11 (typeOperation -> TK_OPEI .)
+
+
+state 18
+
+    (12) typeOperation -> TK_OPEA .
+
+    TK_LPAR         reduce using rule 12 (typeOperation -> TK_OPEA .)
+
+
+state 19
+
+    (4) declareS -> TK_SGN TK_LCOR TK_NAME . TK_RCOR TK_ASIG TK_DATAS TK_LNBK
+
+    TK_RCOR         shift and go to state 24
+
+
+state 20
+
+    (5) declareI -> TK_FLT TK_LCOR TK_NAME . TK_RCOR TK_ASIG TK_DATAI TK_LNBK
+
+    TK_RCOR         shift and go to state 25
+
+
+state 21
+
+    (1) expression -> declaration declaration declarationFuntion TK_LNBK .
+
+    $end            reduce using rule 1 (expression -> declaration declaration declarationFuntion TK_LNBK .)
+
+
+state 22
+
+    (8) declareBasicOp -> TK_OPER TK_LPAR . TK_NAME TK_RPAR
+
+    TK_NAME         shift and go to state 26
+
+
+state 23
+
+    (13) declareOp -> typeOperation TK_LPAR . TK_NAME , TK_NAME TK_RPAR
+
+    TK_NAME         shift and go to state 27
+
+
+state 24
+
+    (4) declareS -> TK_SGN TK_LCOR TK_NAME TK_RCOR . TK_ASIG TK_DATAS TK_LNBK
+
+    TK_ASIG         shift and go to state 28
+
+
+state 25
+
+    (5) declareI -> TK_FLT TK_LCOR TK_NAME TK_RCOR . TK_ASIG TK_DATAI TK_LNBK
+
+    TK_ASIG         shift and go to state 29
+
+
+state 26
+
+    (8) declareBasicOp -> TK_OPER TK_LPAR TK_NAME . TK_RPAR
+
+    TK_RPAR         shift and go to state 30
+
+
+state 27
+
+    (13) declareOp -> typeOperation TK_LPAR TK_NAME . , TK_NAME TK_RPAR
+
+    ,               shift and go to state 31
+
+
+state 28
+
+    (4) declareS -> TK_SGN TK_LCOR TK_NAME TK_RCOR TK_ASIG . TK_DATAS TK_LNBK
+
+    TK_DATAS        shift and go to state 32
+
+
+state 29
+
+    (5) declareI -> TK_FLT TK_LCOR TK_NAME TK_RCOR TK_ASIG . TK_DATAI TK_LNBK
+
+    TK_DATAI        shift and go to state 33
+
+
+state 30
+
+    (8) declareBasicOp -> TK_OPER TK_LPAR TK_NAME TK_RPAR .
+
+    TK_LNBK         reduce using rule 8 (declareBasicOp -> TK_OPER TK_LPAR TK_NAME TK_RPAR .)
+
+
+state 31
+
+    (13) declareOp -> typeOperation TK_LPAR TK_NAME , . TK_NAME TK_RPAR
+
+    TK_NAME         shift and go to state 34
+
+
+state 32
+
+    (4) declareS -> TK_SGN TK_LCOR TK_NAME TK_RCOR TK_ASIG TK_DATAS . TK_LNBK
+
+    TK_LNBK         shift and go to state 35
+
+
+state 33
+
+    (5) declareI -> TK_FLT TK_LCOR TK_NAME TK_RCOR TK_ASIG TK_DATAI . TK_LNBK
+
+    TK_LNBK         shift and go to state 36
+
+
+state 34
+
+    (13) declareOp -> typeOperation TK_LPAR TK_NAME , TK_NAME . TK_RPAR
+
+    TK_RPAR         shift and go to state 37
+
+
+state 35
+
+    (4) declareS -> TK_SGN TK_LCOR TK_NAME TK_RCOR TK_ASIG TK_DATAS TK_LNBK .
+
+    TK_SGN          reduce using rule 4 (declareS -> TK_SGN TK_LCOR TK_NAME TK_RCOR TK_ASIG TK_DATAS TK_LNBK .)
+    TK_FLT          reduce using rule 4 (declareS -> TK_SGN TK_LCOR TK_NAME TK_RCOR TK_ASIG TK_DATAS TK_LNBK .)
+    TK_OPER         reduce using rule 4 (declareS -> TK_SGN TK_LCOR TK_NAME TK_RCOR TK_ASIG TK_DATAS TK_LNBK .)
+    TK_OPED         reduce using rule 4 (declareS -> TK_SGN TK_LCOR TK_NAME TK_RCOR TK_ASIG TK_DATAS TK_LNBK .)
+    TK_OPES         reduce using rule 4 (declareS -> TK_SGN TK_LCOR TK_NAME TK_RCOR TK_ASIG TK_DATAS TK_LNBK .)
+    TK_OPEI         reduce using rule 4 (declareS -> TK_SGN TK_LCOR TK_NAME TK_RCOR TK_ASIG TK_DATAS TK_LNBK .)
+    TK_OPEA         reduce using rule 4 (declareS -> TK_SGN TK_LCOR TK_NAME TK_RCOR TK_ASIG TK_DATAS TK_LNBK .)
+
+
+state 36
+
+    (5) declareI -> TK_FLT TK_LCOR TK_NAME TK_RCOR TK_ASIG TK_DATAI TK_LNBK .
+
+    TK_SGN          reduce using rule 5 (declareI -> TK_FLT TK_LCOR TK_NAME TK_RCOR TK_ASIG TK_DATAI TK_LNBK .)
+    TK_FLT          reduce using rule 5 (declareI -> TK_FLT TK_LCOR TK_NAME TK_RCOR TK_ASIG TK_DATAI TK_LNBK .)
+    TK_OPER         reduce using rule 5 (declareI -> TK_FLT TK_LCOR TK_NAME TK_RCOR TK_ASIG TK_DATAI TK_LNBK .)
+    TK_OPED         reduce using rule 5 (declareI -> TK_FLT TK_LCOR TK_NAME TK_RCOR TK_ASIG TK_DATAI TK_LNBK .)
+    TK_OPES         reduce using rule 5 (declareI -> TK_FLT TK_LCOR TK_NAME TK_RCOR TK_ASIG TK_DATAI TK_LNBK .)
+    TK_OPEI         reduce using rule 5 (declareI -> TK_FLT TK_LCOR TK_NAME TK_RCOR TK_ASIG TK_DATAI TK_LNBK .)
+    TK_OPEA         reduce using rule 5 (declareI -> TK_FLT TK_LCOR TK_NAME TK_RCOR TK_ASIG TK_DATAI TK_LNBK .)
+
+
+state 37
+
+    (13) declareOp -> typeOperation TK_LPAR TK_NAME , TK_NAME TK_RPAR .
+
+    TK_LNBK         reduce using rule 13 (declareOp -> typeOperation TK_LPAR TK_NAME , TK_NAME TK_RPAR .)
+
