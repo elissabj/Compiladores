@@ -1,0 +1,3 @@
+float          [ fact ]= 3 ;
+signal [ decimate ]   =    recordEli.wav   ;
+decimate ( decimate, fact )  ; 
