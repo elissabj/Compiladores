@@ -24,6 +24,7 @@ Es un compilador de señales de audio.
 
    ## Syntaxis
    Para la declaración de un tipo de dato. 
+   
    ```sng [nombreDeVariable] = nombreDelArchivo.wav;```
    
    ```float[nombreDeVariable] = 20000;```
@@ -31,6 +32,7 @@ Es un compilador de señales de audio.
    ```float [nombreDeVariable] = 3.5;```
    
    Para las operaciones.
+   
    ```interpolate(nombreDeVariableDeLaSeñal, nombreDeVariableDelFactor);```
    
    ```amplitude(nombreDeVariableDeLaSeñal, nombreDeVariableDelFactor);```
