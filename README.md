@@ -58,6 +58,11 @@ Es un compilador de señales de audio.
       signal [ prueba  ]   =    recordEli.wav   ;
       interpolate ( prueba, factorFloat )  ; 
       
+   Algunas recomendaciones para poder apreciar mejor las operaciones son:
+   - Para "decimate", factor podría ser de valor 4.
+   - Para "amplitude", factor = 110000.
+   - Para "interpolate", factor = 3.
+   - Para "shift", factor = -40000.
       
    ## Dependencias
    Se desarolló en Python 3 usando las siguientes bibliotecas auxiliares.
@@ -94,6 +99,7 @@ Se desarrollaron todas las prácticas en C++.
    a) El número de No Terminales y definir cuales son separados por espacio.
    b) El número de Terminales y definir cuales son separados por espacio.
    c) El número de Producciones y definir cuales son separados por enter.
+   d) Para el uso de épsilon utilizamos el caracter #.
    
    Ejemplo
    Entrada:
