@@ -24,20 +24,20 @@ Es un compilador de señales de audio.
    
    ## Ejemplo de código 
    Ejemplo de compilación válida.
-      ```
+      
       float          [ fact ]= 4;
       signal [ prueba  ]   =    recordEli.wav   ;
       reflect ( prueba )  ; 
-      ```
+      
       
    Ejemplo de compilación inválida.
       
-      ```
+      
       float          [ fact ]= 4;
       signal [ prueba  ]   =    recordEli.wav   ;
       interpolate ( prueba, factorFloat )  ; 
-      ```
-   
+      
+      
    ## Alcance
    - [ ] Solo acepta señales de audio en formato ".wav".
    - [ ] El código se tiene que sobreescribir en el archivo "codigo.txt".
