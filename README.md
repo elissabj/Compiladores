@@ -78,8 +78,10 @@ Es un compilador de señales de audio.
 
    ## Ejecución del Compilador
    
-   - <img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/svgs/brands/windows.svg" alt="windows" width="16" height="16"/>Windows</a>
-
+   - <img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/svgs/brands/windows.svg" alt="windows" width="16" height="16"/>Windows</a> 
+         python sgn.py
+   - <img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/svgs/brands/linux.svg" alt="linux" width="16" height="16"/>Linux</a>
+         python3 sgn.py
 
 
    
