@@ -59,14 +59,6 @@ Es un compilador de señales de audio.
       interpolate ( prueba, factorFloat )  ; 
       
       
-   ## Alcance
-   - [ ] Solo acepta señales de audio en formato ".wav".
-   - [ ] El código se tiene que sobreescribir en el archivo "codigo.txt".
-   - [ ] Para mejor rendimiento se recomienda aplicarlo en señales de audio con duración no mayor a 10 s.
-   - [ ] Para algún nombre de las variables solo se aceptan nombres que contengan minúsculas y mayúsculas.
-   - [ ] En el código no puede existir más de una operación definida, solo acepta una operación por compilación.
-   - [ ] Al momento de usar la operación "reflect" es necesario hacer la declaración de los dos tipos de dato disponibles.
-   
    ## Dependencias
    Se desarolló en Python 3 usando las siguientes bibliotecas auxiliares.
    - ply 
@@ -86,9 +78,15 @@ Es un compilador de señales de audio.
          
          python3 sgn.py
 
+   ## Alcance
+   - [ ] Solo acepta señales de audio en formato ".wav".
+   - [ ] El código se tiene que sobreescribir en el archivo "codigo.txt".
+   - [ ] Para mejor rendimiento se recomienda aplicarlo en señales de audio con duración no mayor a 10 s.
+   - [ ] Para algún nombre de las variables solo se aceptan nombres que contengan minúsculas y mayúsculas.
+   - [ ] En el código no puede existir más de una operación definida, solo acepta una operación por compilación.
+   - [ ] Al momento de usar la operación "reflect" es necesario hacer la declaración de los dos tipos de dato disponibles.
 
-   
-   
+# Practicas 
         
      
      
