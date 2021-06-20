@@ -7,7 +7,7 @@ Aplicación de los conocimientos adquiridos durante el curso de compiladores 202
 # Proyecto Final 
 
 Es un compilador de señales de audio. 
-   A través de este compilador se podrá someter una señal de audio a alguna operación básica disponible. La entrada es el código en formato .txt y una señal de entrada con formato .wav, como salida obtendremos un ploteo (de ambas señales Entrada-Salida) y el archivo de la señal alterada de salida. Se realiza por un lenguaje de programación 
+   A través de este compilador se podrá someter una señal de audio a alguna operación básica disponible. La entrada es el código en formato .txt y una señal de entrada con formato .wav, como salida obtendremos un ploteo (de ambas señales Entrada-Salida) y el archivo de la señal alterada. Se realiza por un lenguaje de programación 
    que decidí llamar "SGN" que contiene las siguientes características: 
    ## Tipos de dato.
    Al momento de hacer el diseño me gustó hacer un lenguaje tipado, por el momento solo acepta dos tipos.
