@@ -354,6 +354,7 @@ return true;
 
 /*
 Ejemplos de entrada para probar el algoritmo
+Para usar epsilon utilizamos el simbolo # 
 
 5
 E E' T T' F
