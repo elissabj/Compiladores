@@ -25,24 +25,12 @@ Es un compilador de señales de audio.
    ## Ejemplo de código 
    Ejemplo de compilación válida.
       ```
-      float          [ fact ]= 3 ;
-      signal [ audio ]   =    recordEli.wav   ;
-      decimate ( audio, fact )  ;
-      ```
-      
-      ```
       float          [ fact ]= 4;
       signal [ prueba  ]   =    recordEli.wav   ;
       reflect ( prueba )  ; 
       ```
       
    Ejemplo de compilación inválida.
-      ```
-      float          [ fact ]= 4;
-      signal [ prueba  ]   =    recordEli.wav   ;
-      interpolate ( prueba, fact)  ; 
-      decimate ( prueba , fact ) ; 
-      ```
       
       ```
       float          [ fact ]= 4;
