@@ -8,7 +8,7 @@ Aplicación de los conocimientos adquiridos durante el curso de compiladores 202
 
 Es un compilador de señales de audio. 
    A través de este compilador se podrá someter una señal de audio a alguna operación básica disponible. Se realiza por un lenguaje de programación 
-   que decidí llamar "sgn" que contiene las siguientes características: 
+   que decidí llamar "SGN" que contiene las siguientes características: 
    ## Tipos de dato.
    Al momento de hacer el diseño me gustó hacer un lenguaje tipado, por el momento solo acepta dos tipos.
    - "sgn" : es el tipo de dato que se le asigna a la señal de audio.
@@ -21,6 +21,21 @@ Es un compilador de señales de audio.
    - "amplitude": operación que hace una cierta extensión de la señal, existen la amplificación (factor entero) y la atenuación (factor decimal) por lo que la operación definida en este lenguaje cumple ambas sin ningún problema, el factor tiene que ser ≥ 0.
    - "shift": operación de desplazamiento de la señal hacia la izquierda o derecha, el factor pertenece al conjunto ℝ.
    - "reflect": operación que invierte la señal de audio.
+
+   ## Syntaxis
+   Para la declaración de un tipo de dato. 
+   ```sng [nombreDeVariable] = nombreDelArchivo.wav;```
+   ```float[nombreDeVariable] = 20000;```
+   ```float [nombreDeVariable] = 3.5;```
+   
+   Para las operaciones.
+   ```interpolate(nombreDeVariableDeLaSeñal, nombreDeVariableDelFactor);```
+   ```amplitude(nombreDeVariableDeLaSeñal, nombreDeVariableDelFactor);```
+   ```decimate(nombreDeVariableDeLaSeñal, nombreDeVariableDelFactor);```
+   ```shift(nombreDeVariableDeLaSeñal, nombreDeVariableDelFactor);```
+   ```reflect(nombreDeVariableDeLaSeñal);```
+   
+  
    
    ## Ejemplo de código 
    Ejemplo de compilación válida.
