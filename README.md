@@ -17,10 +17,11 @@ Es un compilador de señales de audio.
    ## Operaciones.
    Las operaciones disponibles son:
    - "decimate": operación que elimina submuestras de la señal de audio por un factor indicado, este factor tiene que ser ≥ 0. 
-   - "interpoalte": operación que agrega submuestras a la señal de audio (utilizando el método interpolación a escalón) por una factor indicado, este factor tiene que ser ≥ 0.
-   - "amplitude": operación que hace una cierta extensión de la señal, existen la amplificación (factor ℕ) y la atenuación (factor ℝ) por lo que la operación definida en este lenguaje cumple ambas sin ningún problema. 
+   - "interpolate": operación que agrega submuestras a la señal de audio (utilizando el método interpolación a escalón) por una factor indicado, este factor tiene que ser ≥ 0.
+   - "amplitude": operación que hace una cierta extensión de la señal, existen la amplificación (factor entero) y la atenuación (factor decimal) por lo que la operación definida en este lenguaje cumple ambas sin ningún problema, el factor tiene que ser ≥ 0.
    - "shift": operación de desplazamiento de la señal hacia la izquierda o derecha, el factor tiene lugar en los ℝ.
    - "reflect": operación que invierte la señal de audio.
+   
    
         
      
