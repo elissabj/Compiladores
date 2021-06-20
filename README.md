@@ -27,8 +27,6 @@ Es un compilador de señales de audio.
    
    ```sng [nombreDeVariable] = nombreDelArchivo.wav;```
    
-   ```float[nombreDeVariable] = 20000;```
-   
    ```float [nombreDeVariable] = 3.5;```
    
    Para las operaciones.
@@ -67,6 +65,19 @@ Es un compilador de señales de audio.
    - [ ] Para mejor rendimiento se recomienda aplicarlo en señales de audio con duración no mayor a 10 s.
    - [ ] Para algún nombre de las variables solo se aceptan nombres que contengan minúsculas y mayúsculas.
    - [ ] En el código no puede existir más de una operación definida, solo acepta una operación por compilación.
+   - [ ] Al momento de usar la operación "reflect" es necesario hacer la declaración de los dos tipos de dato disponibles.
+   
+   ## Dependencias
+   Se desarolló en Python 3 usando las siguientes bibliotecas auxiliares.
+   - ply 
+   - wavio
+   - numpy
+   - scipy
+   - matplotlib
+   - sounddevice
+
+   ## Ejecución del Compilador
+   
 
 
    
