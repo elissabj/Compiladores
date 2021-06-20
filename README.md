@@ -67,9 +67,9 @@ Es un compilador de señales de audio.
    ## Dependencias
    Se desarolló en Python 3 usando las siguientes bibliotecas auxiliares.
    - ply 
+   - scipy
    - wavio
    - numpy
-   - scipy
    - matplotlib
    - sounddevice
 
