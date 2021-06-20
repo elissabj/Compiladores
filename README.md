@@ -19,8 +19,45 @@ Es un compilador de señales de audio.
    - "decimate": operación que elimina submuestras de la señal de audio por un factor indicado, este factor tiene que ser ≥ 0. 
    - "interpolate": operación que agrega submuestras a la señal de audio (utilizando el método interpolación a escalón) por una factor indicado, este factor tiene que ser ≥ 0.
    - "amplitude": operación que hace una cierta extensión de la señal, existen la amplificación (factor entero) y la atenuación (factor decimal) por lo que la operación definida en este lenguaje cumple ambas sin ningún problema, el factor tiene que ser ≥ 0.
-   - "shift": operación de desplazamiento de la señal hacia la izquierda o derecha, el factor tiene lugar en los ℝ.
+   - "shift": operación de desplazamiento de la señal hacia la izquierda o derecha, el factor pertenece al conjunto ℝ.
    - "reflect": operación que invierte la señal de audio.
+   
+   ## Ejemplo de código 
+   Ejemplo de compilación válida.
+      ```
+      float          [ fact ]= 3 ;
+      signal [ audio ]   =    recordEli.wav   ;
+      decimate ( audio, fact )  ;
+      ```
+      
+      ```
+      float          [ fact ]= 4;
+      signal [ prueba  ]   =    recordEli.wav   ;
+      reflect ( prueba )  ; 
+      ```
+      
+   Ejemplo de compilación inválida.
+      ```
+      float          [ fact ]= 4;
+      signal [ prueba  ]   =    recordEli.wav   ;
+      interpolate ( prueba, fact)  ; 
+      decimate ( prueba , fact ) ; 
+      ```
+      
+      ```
+      float          [ fact ]= 4;
+      signal [ prueba  ]   =    recordEli.wav   ;
+      interpolate ( prueba, factorFloat )  ; 
+      ```
+   
+   ## Alcance
+   - [ ] Solo acepta señales de audio en formato ".wav".
+   - [ ] El código se tiene que sobreescribir en el archivo "codigo.txt".
+   - [ ] Para mejor rendimiento se recomienda aplicarlo en señales de audio con duración no mayor a 10 s.
+   - [ ] Para algún nombre de las variables solo se aceptan nombres que contengan minúsculas y mayúsculas.
+   - [ ] En el código no puede existir más de una operación definida, solo acepta una operación por compilación.
+
+
    
    
         
