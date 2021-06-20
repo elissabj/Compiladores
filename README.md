@@ -69,6 +69,7 @@ Es un compilador de señales de audio.
    - sounddevice
 
    ## Ejecución del Compilador
+   En consola
    
    - <img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/svgs/brands/windows.svg" alt="windows" width="16" height="16"/>Windows</a> 
          
@@ -87,7 +88,47 @@ Es un compilador de señales de audio.
    - [ ] Al momento de usar la operación "reflect" es necesario hacer la declaración de los dos tipos de dato disponibles.
 
 # Practicas 
+Se desarrollaron todas las prácticas en C++. 
+- Se realizaron dos ejemplos de un analizador sintáctico por descenso recursivo, con las gramáticas vistas en clase.
+- Algoritmo LL(1), para su uso se necesitan indicar 
+   a) El número de No Terminales y definir cuales son separados por espacio.
+   b) El número de Terminales y definir cuales son separados por espacio.
+   c) El número de Producciones y definir cuales son separados por enter.
+   
+   Ejemplo
+   Entrada:
+   
+         5
+         E E' T T' F
+         5
+         + * ( ) id
+         8
+         E -> T E'
+         E' -> + T E'
+         E' -> #
+         T -> F T'
+         T' -> * F T'
+         T' -> #
+         F -> ( E )
+         F -> id
+         ((id+id*id)+id
+         
+    La salida será la Tabla Final del algoritmo y si la cadena es correcta o incorrecta.
+    Salida: 
+    
+         La tabla final es:
+         E,1: ( id
+         E',2: +
+         E',3: $ )
+         F,7: (
+         F,8: id
+         T,4: ( id
+         T',5: *
+         T',6: $ ) +
+         
+         cadena invalida
+         
+    
         
-     
      
     
