@@ -134,11 +134,12 @@ Se desarrollaron todas las prácticas en C++.
          
          cadena invalida
          
- - Algoritmo LR(0), para su uso se necesitan indicar, aun falta validar la cadena, se piensa desarrollar en los proximos meses
-   a) Las producciones de la gramática.    
+ - Algoritmo LR(0), aun falta validar la cadena, se piensa desarrollar en los proximos meses. Para su uso se debe poner
+   a) Número de producciones b)Las producciones de la gramática.    
    Ejemplo
    Entrada:
     
+         8
          E->TE'
          E'->+TE'
          E'->#
